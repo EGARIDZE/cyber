@@ -1,0 +1,26 @@
+.breadcrumbs ul {
+    display: flex;
+    align-items: center;
+    padding: 44px 0px;
+}
+
+.breadcrumbs li {
+    display: flex;
+    text-align: center;
+
+}
+
+.breadcrumbs a,
+.breadcrumbs li span {
+    color: #A4A4A4;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.breadcrumbs li span {
+    color: #000;
+}
+
+.breadcrumbs li img {
+    margin: 0px 16px;
+}

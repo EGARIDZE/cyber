@@ -1,0 +1,352 @@
+@import url(breadcrumbs.css);
+
+.product__container {
+    padding: 80px 0px;
+}
+
+.product__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery {
+    width: 45%;
+    position: relative;
+    height: 600px;
+    max-height: 100vh;
+    display: flex;
+}
+
+.mySwiper {
+    width: 120px;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    margin-right: 20px;
+}
+
+.mySwiper .swiper-slide {
+    height: auto;
+    width: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.mySwiper2 {
+    flex: 1;
+    height: 100%;
+    max-height: 100%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.product__description {
+    width: 50%;
+}
+
+.product-description {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.product__description h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.product__description h3 {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 500;
+    padding: 24px 0px 12px 0px;
+}
+
+.product__description h3 span {
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 16px;
+    color: #A0A0A0;
+}
+
+.product__color {
+    display: flex;
+    align-items: center;
+}
+
+.product__color h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #0C0C0C;
+}
+
+.product__color ul {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.product__color ul li {
+    margin-right: 8px;
+}
+
+.product__color ul li:last-child {
+    margin-right: 0;
+}
+
+.product__memory ul {
+    display: flex;
+    gap: 16px;
+    margin: 24px 0px;
+}
+
+.product__memory ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.product__memory ul li a {
+    display: block;
+    padding: 12px;
+    border: 1px solid #6F6F6F;
+    border-radius: 8px;
+    color: #6F6F6F;
+    font-size: 14px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.product__memory ul li a:hover {
+    background-color: #f0f0f0;
+    border-color: #000;
+    color: #000;
+}
+
+.product__memory ul li a.disabled {
+    color: #D5D5D5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.product__memory ul li a.selected {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.product__memory ul li a.selected:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.product-description>div {
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+    border-radius: 8px;
+    background-color: #F4F4F4;
+}
+
+.product-description img {
+    width: 20px;
+    object-fit: cover;
+    margin-right: 16px;
+}
+
+.product-description div p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.product-description div p:first-of-type {
+    color: #A7A7A7;
+    padding-bottom: 4px;
+}
+
+.product-description div p:last-of-type {
+    color: #4E4E4E;
+}
+
+.product__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px 0px;
+}
+
+.product__buttons button {
+    width: 47%;
+    padding: 16px 0px;
+    transition: all 0.3s ease;
+}
+
+.product__buttons button:nth-child(1) {
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.product__buttons button:nth-child(1):hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.product__buttons button:nth-child(1) a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.product__buttons button:nth-child(2) {
+    border-radius: 5px;
+    background: #000;
+}
+
+.product__buttons button:nth-child(2):hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+.product__buttons button:nth-child(2) a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.delivery__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delivery__container>div {
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+    border-radius: 8px;
+}
+
+.delivery__container>div .image-container {
+    background-color: #F6F6F6;
+    padding: 20px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.delivery__container img {
+    width: 20px;
+    object-fit: cover;
+}
+
+.delivery__container div p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.delivery__container div p:first-of-type {
+    color: #A7A7A7;
+    padding-bottom: 4px;
+}
+
+.delivery__container div p:last-of-type {
+    color: #4E4E4E;
+}
+
+.full__container {
+    background: #FAFAFA;
+    padding: 80px 0px;
+}
+
+.full__block {
+    background: #fff;
+    padding: 48px 40px;
+}
+
+.full__block h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.full__block p {
+    margin: 32px 0px;
+    color: #9D9D9D;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.full__section-list {
+    margin-bottom: 40px;
+}
+
+.full__section-list:last-child {
+    margin-bottom: 0px;
+}
+
+.full__section-list h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.full__section-list ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    border-bottom: 1px solid #CDCDCD;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+.full__section-list ul li span {
+    color: #000;
+    font-style: 15px;
+    font-weight: 500;
+}
+
+
+.hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.show-more-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #333;
+}
+
+.show-more-btn.active+.hidden-content {
+    max-height: 1000px;
+    transition: max-height 0.4s ease-in;
+}
