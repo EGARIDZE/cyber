@@ -14,7 +14,7 @@ $APPLICATION->SetTitle('Главная');
                 <p>Created to change everything for the better. For everyone</p>
                 <button><a href="">Shop Now</a></button>
             </div>
-            <img src="assets/image/iphone.png" alt="">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/iphone.png" alt="">
         </section>
 
     </div>
@@ -24,27 +24,27 @@ $APPLICATION->SetTitle('Главная');
             <h2>Browse By Category</h2>
             <ul class="category__row">
                 <li>
-                    <img src="assets/image/category/Phones.svg" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/category/Phones.svg" alt="">
                     <a href="">Phones</a>
                 </li>
                 <li>
-                    <img src="assets/image/category/Smart Watches.svg" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/category/Smart Watches.svg" alt="">
                     <a href="">Smart Watches</a>
                 </li>
                 <li>
-                    <img src="assets/image/category/Cameras.svg" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/category/Cameras.svg" alt="">
                     <a href="">Cameras</a>
                 </li>
                 <li>
-                    <img src="assets/image/category/Headphones.svg" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/category/Headphones.svg" alt="">
                     <a href="">Headphones</a>
                 </li>
                 <li>
-                    <img src="assets/image/category/Computers.svg" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/category/Computers.svg" alt="">
                     <a href="">Computers</a>
                 </li>
                 <li>
-                    <img src="assets/image/category/Gaming.svg" alt="">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/category/Gaming.svg" alt="">
                     <a href="">Gaming</a>
                 </li>
             </ul>
@@ -70,7 +70,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -95,7 +95,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -120,7 +120,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -145,7 +145,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -170,7 +170,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -195,7 +195,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -215,28 +215,28 @@ $APPLICATION->SetTitle('Главная');
 
         <div class="popular__row">
             <div style="background: #fff;" class="popular__block block-1">
-                <img src="assets/image/popular/Group 1.png" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/Group 1.png" alt="">
                 <h2>Popular Products</h2>
                 <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                     and ease of use.</p>
                 <button><a href="">Shop Now</a></button>
             </div>
             <div style="background: #F9F9F9;" class="popular__block block-2">
-                <img src="assets/image/popular/image 41.png" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/image 41.png" alt="">
                 <h2>Ipad Pro</h2>
                 <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                     and ease of use.</p>
                 <button><a href="">Shop Now</a></button>
             </div>
             <div style="background: #EAEAEA;" class="popular__block block-3">
-                <img src="assets/image/popular/image 64.png" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/image 64.png" alt="">
                 <h2>Samsung Galaxy </h2>
                 <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                     and ease of use.</p>
                 <button><a href="">Shop Now</a></button>
             </div>
             <div style="background: #2C2C2C;" class="popular__block block-4">
-                <img src="assets/image/popular/Macbook 1.png" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/Macbook 1.png" alt="">
                 <h2>Macbook Pro</h2>
                 <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                     and ease of use.</p>
@@ -266,7 +266,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -291,7 +291,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -316,7 +316,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -341,7 +341,7 @@ $APPLICATION->SetTitle('Главная');
                         </a>
                     </div>
                     <div class="card__image">
-                        <img src="assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/catalog/Iphone 14 pro.png" alt="Product Image">
                     </div>
                     <div class="card__content">
                         <h3 class="card__title">Apple iPhone 14 Pro Max 128GB Deep Purple</h3>
@@ -358,7 +358,7 @@ $APPLICATION->SetTitle('Главная');
     </div>
 
     <div class="advertising__container">
-        <img src="assets/image/adversiting.jpg" alt="">
+        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/adversiting.jpg" alt="">
         <h1>Big Summer Sale</h1>
         <p>Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
         <button><a href="">Shop Now</a></button>

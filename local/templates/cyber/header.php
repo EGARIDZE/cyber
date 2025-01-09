@@ -11,7 +11,7 @@ use Bitrix\Main\Page\Asset;
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title><?= $APPLICATION->ShowTitle(); ?></title>
 	<?
 	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/style.css"); ?>
 
@@ -33,7 +33,15 @@ use Bitrix\Main\Page\Asset;
 				<div class="menu__container">
 					<div class="logo">
 						<a href="">
-							<img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/header-logo.png " alt="">
+							<?php $APPLICATION->IncludeFile(
+								SITE_TEMPLATE_PATH . '/include/header-logo.php',
+								array(),
+								array(
+									'MODE' => 'php',
+									'NAME' => 'Логотип'
+								)
+							);
+							?>
 						</a>
 					</div>
 					<div class="search">
