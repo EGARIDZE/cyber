@@ -121,7 +121,6 @@ body {
 /* Banner Styles */
 .banner__container {
     overflow: hidden;
-    background: #211C24;
     position: relative;
 }
 
@@ -153,6 +152,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #909090;
+    margin-bottom: 20px;
 }
 
 .banner__container button {
@@ -480,6 +480,10 @@ body {
     font-weight: 100;
     color: #fff;
     z-index: 1;
+}
+
+.advertising__container h1 span {
+    font-weight: 800;
 }
 
 .advertising__container p {

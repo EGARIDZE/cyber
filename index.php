@@ -5,19 +5,76 @@ $APPLICATION->SetTitle('Главная');
 
 
 <main class="main">
-    <div class="banner__container">
-
-        <section class="section">
-            <div class="banner__block">
-                <h3 class="banner__subtitle">Pro.Beyond.</h3>
-                <h1 class="banner__title">IPhone 14 <span>Pro</span></h1>
-                <p>Created to change everything for the better. For everyone</p>
-                <button><a href="">Shop Now</a></button>
-            </div>
-            <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/iphone.png" alt="">
-        </section>
-
-    </div>
+    <? $APPLICATION->IncludeComponent(
+        "bitrix:news.list",
+        "main-advertising",
+        array(
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+            "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+            "AJAX_MODE" => "N",	// Включить режим AJAX
+            "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+            "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+            "AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+            "AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+            "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+            "CACHE_GROUPS" => "N",	// Учитывать права доступа
+            "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+            "CACHE_TYPE" => "Y",	// Тип кеширования
+            "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+            "DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+            "DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
+            "DISPLAY_DATE" => "N",	// Выводить дату элемента
+            "DISPLAY_NAME" => "Y",	// Выводить название элемента
+            "DISPLAY_PICTURE" => "N",	// Выводить изображение для анонса
+            "DISPLAY_PREVIEW_TEXT" => "N",	// Выводить текст анонса
+            "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+            "FIELD_CODE" => array(	// Поля
+                0 => "NAME",
+                1 => "",
+            ),
+            "FILTER_NAME" => "",	// Фильтр
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+            "IBLOCK_ID" => "3",	// Код информационного блока
+            "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
+            "INCLUDE_SUBSECTIONS" => "N",	// Показывать элементы подразделов раздела
+            "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+            "NEWS_COUNT" => "1",	// Количество новостей на странице
+            "PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+            "PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+            "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+            "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+            "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+            "PAGER_TITLE" => "Новости",	// Название категорий
+            "PARENT_SECTION" => "",	// ID раздела
+            "PARENT_SECTION_CODE" => "",	// Код раздела
+            "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+            "PROPERTY_CODE" => array(	// Свойства
+                0 => "PROPERTY_DESCRIPTION",
+                1 => "PROPERTY_SUBTEXT_IN_TITLE",
+                2 => "PROPERTY_BUTTON_LINK",
+                3 => "PROPERTY_BUTTON",
+                4 => "PROPERTY_TECHNO_TERM",
+                5 => "PROPERTY_BACKGROUND_COLOR",
+                6 => "PROPERTY_ANIM_PICTURE",
+                7 => "",
+            ),
+            "SET_BROWSER_TITLE" => "N",	// Устанавливать заголовок окна браузера
+            "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+            "SET_META_DESCRIPTION" => "N",	// Устанавливать описание страницы
+            "SET_META_KEYWORDS" => "N",	// Устанавливать ключевые слова страницы
+            "SET_STATUS_404" => "N",	// Устанавливать статус 404
+            "SET_TITLE" => "N",	// Устанавливать заголовок страницы
+            "SHOW_404" => "N",	// Показ специальной страницы
+            "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+            "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+            "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+            "SORT_ORDER2" => "DESC",	// Направление для второй сортировки новостей
+            "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+        ),
+        false
+    ); ?>
 
     <div class="category__container">
         <section class="section">
@@ -213,36 +270,75 @@ $APPLICATION->SetTitle('Главная');
 
     <div class="popular__container">
 
-        <div class="popular__row">
-            <div style="background: #fff;" class="popular__block block-1">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/Group 1.png" alt="">
-                <h2>Popular Products</h2>
-                <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
-                    and ease of use.</p>
-                <button><a href="">Shop Now</a></button>
-            </div>
-            <div style="background: #F9F9F9;" class="popular__block block-2">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/image 41.png" alt="">
-                <h2>Ipad Pro</h2>
-                <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
-                    and ease of use.</p>
-                <button><a href="">Shop Now</a></button>
-            </div>
-            <div style="background: #EAEAEA;" class="popular__block block-3">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/image 64.png" alt="">
-                <h2>Samsung Galaxy </h2>
-                <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
-                    and ease of use.</p>
-                <button><a href="">Shop Now</a></button>
-            </div>
-            <div style="background: #2C2C2C;" class="popular__block block-4">
-                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/popular/Macbook 1.png" alt="">
-                <h2>Macbook Pro</h2>
-                <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
-                    and ease of use.</p>
-                <button><a href="">Shop Now</a></button>
-            </div>
-        </div>
+        <? $APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"popular-products", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "N",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "N",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "Y",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "advertising",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "N",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "4",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "PROPERTY_DESCRIPTION",
+			1 => "PROPERTY_PRODUCT_LINK",
+			2 => "PROPERTY_BUTTON",
+			3 => "PROPERTY_BACKGROUND",
+			4 => "PROPERTY_PICTURE",
+			5 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "popular-products"
+	),
+	false
+); ?>
 
     </div>
 
@@ -357,12 +453,74 @@ $APPLICATION->SetTitle('Главная');
         </section>
     </div>
 
-    <div class="advertising__container">
-        <img src="<?= SITE_TEMPLATE_PATH ?>/assets/image/adversiting.jpg" alt="">
-        <h1>Big Summer Sale</h1>
-        <p>Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
-        <button><a href="">Shop Now</a></button>
-    </div>
+    <? $APPLICATION->IncludeComponent(
+        "bitrix:news.list",
+        "footer-adwertising",
+        array(
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+            "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+            "AJAX_MODE" => "N",	// Включить режим AJAX
+            "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+            "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+            "AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+            "AJAX_OPTION_STYLE" => "N",	// Включить подгрузку стилей
+            "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+            "CACHE_GROUPS" => "N",	// Учитывать права доступа
+            "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+            "CACHE_TYPE" => "A",	// Тип кеширования
+            "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+            "DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+            "DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
+            "DISPLAY_DATE" => "N",	// Выводить дату элемента
+            "DISPLAY_NAME" => "Y",	// Выводить название элемента
+            "DISPLAY_PICTURE" => "N",	// Выводить изображение для анонса
+            "DISPLAY_PREVIEW_TEXT" => "N",	// Выводить текст анонса
+            "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+            "FIELD_CODE" => array(	// Поля
+                0 => "NAME",
+                1 => "",
+            ),
+            "FILTER_NAME" => "",	// Фильтр
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+            "IBLOCK_ID" => "4",	// Код информационного блока
+            "IBLOCK_TYPE" => "advertising",	// Тип информационного блока (используется только для проверки)
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
+            "INCLUDE_SUBSECTIONS" => "N",	// Показывать элементы подразделов раздела
+            "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+            "NEWS_COUNT" => "1",	// Количество новостей на странице
+            "PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+            "PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+            "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+            "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+            "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+            "PAGER_TITLE" => "Новости",	// Название категорий
+            "PARENT_SECTION" => "",	// ID раздела
+            "PARENT_SECTION_CODE" => "",	// Код раздела
+            "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+            "PROPERTY_CODE" => array(	// Свойства
+                0 => "PROPERTY_DESCRIPTION",
+                1 => "PROPERTY_SUBTEXT_IN_TITLE",
+                2 => "PROPERTY_BUTTON_LINK",
+                3 => "PROPERTY_BUTTON",
+                4 => "PROPERTY_PICTURE",
+                5 => "",
+            ),
+            "SET_BROWSER_TITLE" => "N",	// Устанавливать заголовок окна браузера
+            "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+            "SET_META_DESCRIPTION" => "N",	// Устанавливать описание страницы
+            "SET_META_KEYWORDS" => "N",	// Устанавливать ключевые слова страницы
+            "SET_STATUS_404" => "N",	// Устанавливать статус 404
+            "SET_TITLE" => "N",	// Устанавливать заголовок страницы
+            "SHOW_404" => "N",	// Показ специальной страницы
+            "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+            "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+            "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+            "SORT_ORDER2" => "DESC",	// Направление для второй сортировки новостей
+            "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+        ),
+        false
+    ); ?>
 
 </main>
 
